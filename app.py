@@ -5,12 +5,6 @@ from flask import request, redirect
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello():
-    my_name = "John"
-    return f'Hello, {my_name}!'
-
-
 @app.route('/blog/<id>')
 def blog_main(id):
     return f"This is a  blog entry #{id}"
@@ -25,3 +19,17 @@ def message():
         print("We received POST")
         print(request.form)
         return redirect("/")
+
+
+
+
+@app.route('/o_mnie')
+def o_mnie():
+    return render_template('/wizytowka/o_mnie.html')
+
+
+@app.route("/")
+def warehouse():
+    items = ["screwdriver", "hammer", "saw"]
+    errors = ["hammer is broken!"]
+    return render_template("warehouse.html", items=items, errors=errors)

@@ -1,16 +1,13 @@
+<!doctype html>
 <html>
     <head>
+    {% block head %}
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% endblock %}
     </head>
-
     <body>
         <h1>Warehouse</h1>
         <img src="{{url_for('static',filename='logo.jpg')}}" />
-        <form>
-            <label>Element name</label>
-            <input name="element"></input>
-            <input type="submit"/>
-        </form>
+        <div id="content">{% block content %}{% endblock %}</div>
     </body>
-
 </html>
