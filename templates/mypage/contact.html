@@ -1,0 +1,16 @@
+{% extends "mypage/base.html" %}
+{% block title %}
+<title>Contact</title>
+{% endblock %}
+{% block content %}
+
+    <h2 class="first"><strong>email:</strong> zdzislawdyrman@zasadniczo.pl</h2>
+    <h2 class="second"><strong>telefon:</strong> 666 050 666</h2>
+
+<form class ="center" action="/action_page.php" method="get">
+    <div class = "center"> Name: <input type="text" name="usrname"></div>
+    <input class = "center" type="submit">
+    <textarea class = "center" name="comment" rows="3" cols="80"  >Enter text here...</textarea>
+</form>
+{% endblock %}
+
