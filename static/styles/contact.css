@@ -9,8 +9,22 @@ img {
   margin-right: auto;
   width: 40%;
 }
+form {
+margin: 0 auto;
+width: 400px;
+padding: 1em;
+border: 1px solid #ccc;
+border-radius: 1em;
+}
+textarea {
+font: 1em sans-serif;
+width: 395px;
+box-sizing: border-box;
+border: 1px solid #999;
+}
 .first {
   font-size: 22px;
+  color: blue;
   text-align: center;
 }
 .second {
